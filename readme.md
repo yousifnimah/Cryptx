@@ -28,21 +28,22 @@ go install github.com/yousifnimah/Golang-CRC
 
   2 - Use algorithm name from the table below:
 
-  |    Algorithm    | Polynomial    | InitialValue    | XOROUT    |
-      |:--------------:	|:----------:	|:------------:	|:------:	|
-  |      CRC-8        |    0x07        |     0x00        |  0x00    |
-  |       ITU        |    0x07        |      0x0        |  0x55    |
-  |      ROHC        |    0x07        |     0xFF        |  0x00    |
-  |    SAE-J1850    |    0x1D        |     0xFF        |  0xFF    |
-  | SAE-J1850_ZERO    |    0x1D        |      0x0        |   0x0    |
-  |      8H2F        |    0x2F        |     0xFF        |  0xFF    |
-  |    CDMA2000        |    0x9B        |     0xFF        |   0x0    |
-  |      DARC        |    0x39        |     0x00        |  0x00    |
-  |     DVB_S2        |    0xD5        |      0x0        |   0x0    |
-  |       EBU        |    0x1D        |     0xFF        |   0x0    |
-  |      ICODE        |    0x1D        |     0xFD        |   0x0    |
-  |      MAXIM        |    0x31        |      0x0        |   0x0    |
-  |      WCDMA        |    0x9B        |      0x0        |   0x0    |
+  | Algorithm         | Polynomial | Initial Value | XOROUT |
+  |:-----------------:|:----------:|:-------------:|:------:|
+  | CRC-8             |    0x07    |     0x00      |  0x00  |
+  | ITU               |    0x07    |     0x00      |  0x55  |
+  | ROHC              |    0x07    |     0xFF      |  0x00  |
+  | SAE-J1850         |    0x1D    |     0xFF      |  0xFF  |
+  | SAE-J1850_ZERO    |    0x1D    |     0x00      |  0x00  |
+  | 8H2F              |    0x2F    |     0xFF      |  0xFF  |
+  | CDMA2000          |    0x9B    |     0xFF      |  0x00  |
+  | DARC              |    0x39    |     0x00      |  0x00  |
+  | DVB_S2            |    0xD5    |     0x00      |  0x00  |
+  | EBU               |    0x1D    |     0xFF      |  0x00  |
+  | ICODE             |    0x1D    |     0xFD      |  0x00  |
+  | MAXIM             |    0x31    |     0x00      |  0x00  |
+  | WCDMA             |    0x9B    |     0x00      |  0x00  |
+
 
   In main.go:
 
