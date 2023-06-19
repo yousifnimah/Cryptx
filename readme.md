@@ -1,4 +1,5 @@
 ## Golang CRC (Cyclic Redundancy Check)
+
 Comprehensive Go Language (Golang) CRC Library, Supporting CRC8, CRC16, CRC32 and CRC64.
 
 CRC (Cyclic Redundancy Check) is an error detection algorithm that generates a checksum based on the data being
@@ -16,7 +17,7 @@ transmitted. In Go (Golang), you can implement CRC using various algorithms, suc
 ## Installation
 
 ```go
-go install github.com/yousifnimah/Golang-CRC
+go get github.com/yousifnimah/Cryptx
 ```
 
 ## Get Started
@@ -26,7 +27,7 @@ go install github.com/yousifnimah/Golang-CRC
   1 - Importing package into main package
 
     ```go
-    import ("Cryptx/CRC8")
+    import ("github.com/yousifnimah/Cryptx/CRC8")
     ```
 
   2 - Use algorithm name from the table below:
@@ -52,9 +53,9 @@ go install github.com/yousifnimah/Golang-CRC
     ```go
     package main
   
-  import (
-      "Cryptx/CRC8"
-      "fmt"
+    import (
+    "fmt"
+    "github.com/yousifnimah/Cryptx/CRC8"
   )
   
   func main() {
@@ -86,7 +87,7 @@ go install github.com/yousifnimah/Golang-CRC
   1 - Importing package
 
     ```go
-    import ("Cryptx/CRC16")
+    import ("github.com/yousifnimah/Cryptx/CRC16")
     ```
 
   2 - Use algorithm name from the table below:
@@ -121,21 +122,20 @@ go install github.com/yousifnimah/Golang-CRC
 
   In main.go:
 
-    ```go
-    package main
-  
+  ```go
+  package main
+    
   import (
-      "Cryptx/CRC16"
-      "fmt"
+    "fmt"
+    "github.com/yousifnimah/Cryptx/CRC16"
   )
   
-  func main() {
-      Input := []byte("12345")     //string to slice of bytes
-      AlgorithmName := "CCIT_ZERO" //Algorithm name from supported table
-      checksumHex := CRC16.ResultHex(Input, AlgorithmName)
-      fmt.Println("Output:", checksumHex)
+  func main() { 
+	   Input := []byte("12345")     //string to slice of bytes 
+	   AlgorithmName := "CCIT_ZERO" //Algorithm name from supported table checksumHex := CRC16.ResultHex(Input, AlgorithmName)
+	   fmt.Println("Output:", checksumHex)
   }
-    ```
+  ```
 
   Result:
 
@@ -172,8 +172,8 @@ go install github.com/yousifnimah/Golang-CRC
     package main
     
     import (
-       "Cryptx/CRC32"
        "fmt"
+       "github.com/yousifnimah/Cryptx/CRC32"
     )
     
     func main() {
@@ -194,7 +194,7 @@ go install github.com/yousifnimah/Golang-CRC
   1 - Importing package
 
     ```go
-    import ("Cryptx/CRC64")
+    import ("github.com/yousifnimah/Cryptx/CRC64")
     ```
 
   2 - Use algorithm name from the table below:
@@ -210,15 +210,15 @@ go install github.com/yousifnimah/Golang-CRC
     package main
     
     import (
-       "Cryptx/CRC64"
        "fmt"
+       "github.com/yousifnimah/Cryptx/CRC64"
     )
     
     func main() {
-          Input := []byte("12345") //string to slice of bytes
-          AlgorithmName := "ECMA" //Algorithm name from supported table
-          checksumHex := CRC64.ResultHex(Input, AlgorithmName)
-          fmt.Println("Output:", checksumHex)
+       Input := []byte("12345") //string to slice of bytes
+       AlgorithmName := "ECMA" //Algorithm name from supported table
+       checksumHex := CRC64.ResultHex(Input, AlgorithmName)
+       fmt.Println("Output:", checksumHex)
     }
     ```
 

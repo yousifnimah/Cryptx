@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Cryptx/CRC32"
 	"fmt"
+	"github.com/yousifnimah/Cryptx/CRC32"
 )
 
 func main() {

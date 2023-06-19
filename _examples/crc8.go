@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Cryptx/CRC8"
 	"fmt"
+	"github.com/yousifnimah/Cryptx/CRC8"
 )
 
 func main() {

@@ -1,8 +1,8 @@
 package CRC8
 
 import (
-	"Cryptx"
 	fmt "fmt"
+	"github.com/yousifnimah/Cryptx"
 )
 
 type CRC struct {

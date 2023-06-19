@@ -1,8 +1,8 @@
 package CRC32
 
 import (
-	"Cryptx"
 	"fmt"
+	"github.com/yousifnimah/Cryptx"
 )
 
 type CRC struct {

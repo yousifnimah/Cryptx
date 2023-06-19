@@ -1,8 +1,8 @@
 package crc16
 
 import (
-	"Cryptx/CRC16"
 	"fmt"
+	"github.com/yousifnimah/Cryptx/CRC16"
 	"os"
 	"testing"
 )
