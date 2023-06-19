@@ -31,7 +31,7 @@ go install github.com/yousifnimah/Golang-CRC
   2 - Use algorithm name from the table below:
 
   | Algorithm         | Polynomial | Initial Value | XOROUT |
-      |:-----------------:|:----------:|:-------------:|:------:|
+  |:-----------------:|:----------:|:-------------:|:------:|
   | CRC-8             |    0x07    |     0x00      |  0x00  |
   | ITU               |    0x07    |     0x00      |  0x55  |
   | ROHC              |    0x07    |     0xFF      |  0x00  |
@@ -91,7 +91,7 @@ fmt.Println("Output:", checksumByte)
   2 - Use algorithm name from the table below:
 
   | Algorithm   | Polynomial | InitialValue | XOROUT |
-      |-------------|------------|--------------|--------|
+  |-------------|------------|--------------|--------|
   | CCIT_ZERO   | 0x1021     | 0x0000       | 0x0000 |
   | ARC         | 0x8005     | 0x0000       | 0x0000 |
   | AUG_CCITT   | 0x1021     | 0x1D0F       | 0x0000 |
@@ -153,7 +153,7 @@ fmt.Println("Output:", checksumByte)
   2 - Use algorithm name from the table below:
 
   | Algorithm | Polynomial | InitialValue |   XOROUT   |
-      |-----------|------------|--------------|------------|
+  |-----------|------------|--------------|------------|
   | CRC-32    | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
   | BZIP2     | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
   | C         | 0x1EDC6F41 | 0xFFFFFFFF   | 0xFFFFFFFF |
