@@ -46,37 +46,37 @@ go install github.com/yousifnimah/Golang-CRC
   | MAXIM             |    0x31    |     0x00      |  0x00  |
   | WCDMA             |    0x9B    |     0x00      |  0x00  |
 
-In main.go:
+  In main.go:
+  
+    ```go
+    package main
+  
+  import (
+      "Cryptx/CRC8"
+      "fmt"
+  )
+  
+  func main() {
+      Input := []byte("12345") //string to slice of bytes
+      AlgorithmName := "ITU"   //CRC-8 algorithm name from supported table
+      checksumHex := CRC8.ResultHex(Input, AlgorithmName)
+      fmt.Println("Output:", checksumHex)
+  }
+    ```
 
-  ```go
-  package main
+  Result:
+  
+    ```
+    Output: 0x9E
+    ```
 
-import (
-	"Cryptx/CRC8"
-	"fmt"
-)
-
-func main() {
-	Input := []byte("12345") //string to slice of bytes
-	AlgorithmName := "ITU"   //CRC-8 algorithm name from supported table
-	checksumHex := CRC8.ResultHex(Input, AlgorithmName)
-	fmt.Println("Output:", checksumHex)
-}
-  ```
-
-Result:
-
-  ```
-  Output: 0x9E
-  ```
-
-#### You can get output in byte:
-
-  ```go
+  #### You can get output in byte:
+  
+    ```go
     Input := []byte("12345")
-checksumByte := CRC8.Result(Input, "ITU")
-fmt.Println("Output:", checksumByte)
-  ```
+    checksumByte := CRC8.Result(Input, "ITU")
+    fmt.Println("Output:", checksumByte)
+    ```
 
 </br>
 
