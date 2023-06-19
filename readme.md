@@ -10,7 +10,7 @@ transmitted. In Go (Golang), you can implement CRC using various algorithms, suc
     - [CRC-8 Usage](#CRC-8-Usage)
     - [CRC-16 Usage](#CRC-16-Usage)
     - [CRC-32 Usage](#CRC-32-Usage)
-- [Supported Algorithms](#get-started-for-free)
+    - [CRC-64 Usage](#CRC-64-Usage)
 
 ## Installation
 
