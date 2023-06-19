@@ -7,9 +7,9 @@ transmitted. In Go (Golang), you can implement CRC using various algorithms, suc
 
 - [Installation](#Installation)
 - [Get started](#Get-Started)
-  - [CRC-8 Usage](#CRC-8-Usage)
-  - [CRC-16 Usage](#CRC-16-Usage)
-  - [CRC-32 Usage](#CRC-32-Usage)
+    - [CRC-8 Usage](#CRC-8-Usage)
+    - [CRC-16 Usage](#CRC-16-Usage)
+    - [CRC-32 Usage](#CRC-32-Usage)
 - [Supported Algorithms](#get-started-for-free)
 
 ## Installation
@@ -31,7 +31,7 @@ go install github.com/yousifnimah/Golang-CRC
   2 - Use algorithm name from the table below:
 
   | Algorithm         | Polynomial | Initial Value | XOROUT |
-  |:-----------------:|:----------:|:-------------:|:------:|
+      |:-----------------:|:----------:|:-------------:|:------:|
   | CRC-8             |    0x07    |     0x00      |  0x00  |
   | ITU               |    0x07    |     0x00      |  0x55  |
   | ROHC              |    0x07    |     0xFF      |  0x00  |
@@ -46,41 +46,39 @@ go install github.com/yousifnimah/Golang-CRC
   | MAXIM             |    0x31    |     0x00      |  0x00  |
   | WCDMA             |    0x9B    |     0x00      |  0x00  |
 
-
-  In main.go:
+In main.go:
 
   ```go
   package main
 
-  import (
-     "Cryptx/CRC8"
-     "fmt"
-  )
+import (
+	"Cryptx/CRC8"
+	"fmt"
+)
 
-  func main() {
-        Input := []byte("12345") //string to slice of bytes
-        AlgorithmName := "ITU" //CRC-8 algorithm name from supported table
-        checksumHex := CRC8.ResultHex(Input, AlgorithmName)
-        fmt.Println("Output:", checksumHex)
-  }
+func main() {
+	Input := []byte("12345") //string to slice of bytes
+	AlgorithmName := "ITU"   //CRC-8 algorithm name from supported table
+	checksumHex := CRC8.ResultHex(Input, AlgorithmName)
+	fmt.Println("Output:", checksumHex)
+}
   ```
 
-  Result:
+Result:
+
   ```
   Output: 0x9E
   ```
-  
-  #### You can get output in byte:
+
+#### You can get output in byte:
 
   ```go
     Input := []byte("12345")
-    checksumByte := CRC8.Result(Input, "ITU")
-    fmt.Println("Output:", checksumByte)
+checksumByte := CRC8.Result(Input, "ITU")
+fmt.Println("Output:", checksumByte)
   ```
 
-
 </br>
-
 
 - ## CRC-16 Usage
 
@@ -93,7 +91,7 @@ go install github.com/yousifnimah/Golang-CRC
   2 - Use algorithm name from the table below:
 
   | Algorithm   | Polynomial | InitialValue | XOROUT |
-  |-------------|------------|--------------|--------|
+      |-------------|------------|--------------|--------|
   | CCIT_ZERO   | 0x1021     | 0x0000       | 0x0000 |
   | ARC         | 0x8005     | 0x0000       | 0x0000 |
   | AUG_CCITT   | 0x1021     | 0x1D0F       | 0x0000 |
@@ -120,30 +118,29 @@ go install github.com/yousifnimah/Golang-CRC
   | XMODEM      | 0x1021     | 0x0000       | 0x0000 |
   | IBM         | 0x8005     | 0x0000       | 0x0000 |
 
+  In main.go:
 
-In main.go:
-
-  ```go
-  package main
-
+    ```go
+    package main
+  
   import (
-     "Cryptx/CRC16"
-     "fmt"
+      "Cryptx/CRC16"
+      "fmt"
   )
-
+  
   func main() {
-        Input := []byte("12345") //string to slice of bytes
-        AlgorithmName := "CCIT_ZERO" //Algorithm name from supported table
-        checksumHex := CRC16.ResultHex(Input, AlgorithmName)
-        fmt.Println("Output:", checksumHex)
+      Input := []byte("12345")     //string to slice of bytes
+      AlgorithmName := "CCIT_ZERO" //Algorithm name from supported table
+      checksumHex := CRC16.ResultHex(Input, AlgorithmName)
+      fmt.Println("Output:", checksumHex)
   }
-  ```
+    ```
 
-Result:
-  ```
-  Output: 0x546C
-  ```
+  Result:
 
+    ```
+    Output: 0x546C
+    ```
 
 - ## CRC-32 Usage
 
@@ -156,7 +153,7 @@ Result:
   2 - Use algorithm name from the table below:
 
   | Algorithm | Polynomial | InitialValue |   XOROUT   |
-  |-----------|------------|--------------|------------|
+      |-----------|------------|--------------|------------|
   | CRC-32    | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
   | BZIP2     | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
   | C         | 0x1EDC6F41 | 0xFFFFFFFF   | 0xFFFFFFFF |
@@ -168,26 +165,25 @@ Result:
   | XFER      | 0xAF       | 0x0          | 0x0        |
   | KOOPM     | 0x741B8CD7 | 0xFFFFFFFF   | 0xFFFFFFFF |
 
+  In main.go:
 
-In main.go:
+    ```go
+    package main
+    
+    import (
+       "Cryptx/CRC32"
+       "fmt"
+    )
+    
+    func main() {
+          Input := []byte("12345") //string to slice of bytes
+          AlgorithmName := "BZIP2" //Algorithm name from supported table
+          checksumHex := CRC32.ResultHex(Input, AlgorithmName)
+          fmt.Println("Output:", checksumHex)
+    }
+    ```
 
-  ```go
-  package main
-
-  import (
-     "Cryptx/CRC32"
-     "fmt"
-  )
-
-  func main() {
-        Input := []byte("12345") //string to slice of bytes
-        AlgorithmName := "BZIP2" //Algorithm name from supported table
-        checksumHex := CRC32.ResultHex(Input, AlgorithmName)
-        fmt.Println("Output:", checksumHex)
-  }
-  ```
-
-Result:
+  Result:
   ```
   Output: 0x426548B8
   ```
