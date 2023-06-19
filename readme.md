@@ -8,7 +8,7 @@ transmitted. In Go (Golang), you can implement CRC using various algorithms, suc
 - [Installation](#Installation)
 - [Get started](#Get-Started)
   - [CRC-8 Usage](#CRC-8-Usage)
-  - [CRC-16 Usage](#CRC-8-Usage)
+  - [CRC-16 Usage](#CRC-16-Usage)
 - [Supported Algorithms](#get-started-for-free)
 
 ## Installation
@@ -132,7 +132,7 @@ In main.go:
 
   func main() {
         Input := []byte("12345") //string to slice of bytes
-        AlgorithmName := "CCIT_ZERO" //CRC-8 algorithm name from supported table
+        AlgorithmName := "CCIT_ZERO" //Algorithm name from supported table
         checksumHex := CRC16.ResultHex(Input, AlgorithmName)
         fmt.Println("Output:", checksumHex)
   }
