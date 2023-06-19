@@ -47,7 +47,7 @@ go install github.com/yousifnimah/Golang-CRC
   | WCDMA             |    0x9B    |     0x00      |  0x00  |
 
   In main.go:
-  
+
     ```go
     package main
   
@@ -65,13 +65,13 @@ go install github.com/yousifnimah/Golang-CRC
     ```
 
   Result:
-  
+
     ```
     Output: 0x9E
     ```
 
   #### You can get output in byte:
-  
+
     ```go
     Input := []byte("12345")
     checksumByte := CRC8.Result(Input, "ITU")
@@ -186,4 +186,43 @@ go install github.com/yousifnimah/Golang-CRC
   Result:
   ```
   Output: 0x426548B8
+  ```
+
+- ## CRC-64 Usage
+
+  1 - Importing package
+
+    ```go
+    import ("Cryptx/CRC64")
+    ```
+
+  2 - Use algorithm name from the table below:
+
+  | Algorithm |     Polynomial      |    InitialValue     |       XOROUT        |
+  |-----------|---------------------|---------------------|---------------------|
+  | ECMA      | 0x42F0E1EBA9EA3693  | 0xFFFFFFFFFFFFFFFF  | 0xFFFFFFFFFFFFFFFF  |
+  | WE        | 0x42F0E1EBA9EA3693  | 0xFFFFFFFFFFFFFFFF  | 0xFFFFFFFFFFFFFFFF  |
+
+  In main.go:
+
+    ```go
+    package main
+    
+    import (
+       "Cryptx/CRC64"
+       "fmt"
+    )
+    
+    func main() {
+          Input := []byte("12345") //string to slice of bytes
+          AlgorithmName := "ECMA" //Algorithm name from supported table
+          checksumHex := CRC64.ResultHex(Input, AlgorithmName)
+          fmt.Println("Output:", checksumHex)
+    }
+    ```
+
+  Result:
+
+  ```
+  Output: 0xDDEDF5CB80FA64E9
   ```
