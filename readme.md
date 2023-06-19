@@ -9,6 +9,7 @@ transmitted. In Go (Golang), you can implement CRC using various algorithms, suc
 - [Get started](#Get-Started)
   - [CRC-8 Usage](#CRC-8-Usage)
   - [CRC-16 Usage](#CRC-16-Usage)
+  - [CRC-32 Usage](#CRC-32-Usage)
 - [Supported Algorithms](#get-started-for-free)
 
 ## Installation
@@ -141,4 +142,52 @@ In main.go:
 Result:
   ```
   Output: 0x546C
+  ```
+
+
+- ## CRC-32 Usage
+
+  1 - Importing package
+
+    ```go
+    import ("Cryptx/CRC32")
+    ```
+
+  2 - Use algorithm name from the table below:
+
+  | Algorithm | Polynomial | InitialValue |   XOROUT   |
+  |-----------|------------|--------------|------------|
+  | CRC-32    | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
+  | BZIP2     | 0x4C11DB7  | 0xFFFFFFFF   | 0xFFFFFFFF |
+  | C         | 0x1EDC6F41 | 0xFFFFFFFF   | 0xFFFFFFFF |
+  | D         | 0xA833982B | 0xFFFFFFFF   | 0xFFFFFFFF |
+  | MPEG2     | 0x4C11DB7  | 0xFFFFFFFF   | 0x0        |
+  | POSIX     | 0x4C11DB7  | 0x0          | 0xFFFFFFFF |
+  | Q         | 0x814141AB | 0x0          | 0x0        |
+  | JAMCRC    | 0x4C11DB7  | 0xFFFFFFFF   | 0x0        |
+  | XFER      | 0xAF       | 0x0          | 0x0        |
+  | KOOPM     | 0x741B8CD7 | 0xFFFFFFFF   | 0xFFFFFFFF |
+
+
+In main.go:
+
+  ```go
+  package main
+
+  import (
+     "Cryptx/CRC32"
+     "fmt"
+  )
+
+  func main() {
+        Input := []byte("12345") //string to slice of bytes
+        AlgorithmName := "BZIP2" //Algorithm name from supported table
+        checksumHex := CRC32.ResultHex(Input, AlgorithmName)
+        fmt.Println("Output:", checksumHex)
+  }
+  ```
+
+Result:
+  ```
+  Output: 0x426548B8
   ```
