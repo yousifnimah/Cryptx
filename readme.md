@@ -5,7 +5,7 @@ Comprehensive Go Language (Golang) CRC Library, Supporting CRC8, CRC16, CRC32 an
 CRC (Cyclic Redundancy Check) is an error detection algorithm that generates a checksum based on the data being
 transmitted. In Go (Golang), you can implement CRC using various algorithms, such as CRC-8, CRC-16, CRC-32 or CRC-64.
 
-## Table of Contents
+## Table of Contents 
 
 - [Installation](#Installation)
 - [Get started](#Get-Started)
