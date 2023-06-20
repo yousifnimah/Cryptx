@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CRC.iml" filepath="$PROJECT_DIR$/.idea/CRC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Cryptx.iml" filepath="$PROJECT_DIR$/.idea/Cryptx.iml" />
     </modules>
   </component>
 </project>
