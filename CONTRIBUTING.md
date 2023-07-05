@@ -16,7 +16,7 @@ Fork the repository on GitHub.
 Clone the forked repository to your local machine.
 
 ```
-git clone https://github.com/your-username/Cryptx.git
+git clone git@github.com:yousifnimah/Cryptx.git
 ```
 
 Create a branch for your changes.
